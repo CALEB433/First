@@ -1,0 +1,548 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{54D5366E-8CCC-45E2-9B9F-2A1BE4537A73}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AmazingVision</RootNamespace>
+    <AssemblyName>AmazingVision</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44375</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>3.6</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="about.html" />
+    <Content Include="contact.html" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\css\style.css" />
+    <Content Include="Content\img\about.jpg" />
+    <Content Include="Content\img\apple-touch-icon.png" />
+    <Content Include="Content\img\beauty-products-in-salon-3736397.jpg" />
+    <Content Include="Content\img\beauty-products-on-shelves-3735615.jpg" />
+    <Content Include="Content\img\blog-1.jpg" />
+    <Content Include="Content\img\blog-2.jpg" />
+    <Content Include="Content\img\blog-3.jpg" />
+    <Content Include="Content\img\blog-4.jpg" />
+    <Content Include="Content\img\blog-5.jpg" />
+    <Content Include="Content\img\blog-author.jpg" />
+    <Content Include="Content\img\blog-recent-posts-1.jpg" />
+    <Content Include="Content\img\blog-recent-posts-2.jpg" />
+    <Content Include="Content\img\blog-recent-posts-3.jpg" />
+    <Content Include="Content\img\blog-recent-posts-4.jpg" />
+    <Content Include="Content\img\blog-recent-posts-5.jpg" />
+    <Content Include="Content\img\brown-sliced-soaps-773252.jpg" />
+    <Content Include="Content\img\clients\client-1.png" />
+    <Content Include="Content\img\clients\client-2.png" />
+    <Content Include="Content\img\clients\client-3.png" />
+    <Content Include="Content\img\clients\client-4.png" />
+    <Content Include="Content\img\clients\client-5.png" />
+    <Content Include="Content\img\clients\client-6.png" />
+    <Content Include="Content\img\clients\client-7.png" />
+    <Content Include="Content\img\clients\client-8.png" />
+    <Content Include="Content\img\close-up-photo-of-woman-3061415%281%29.jpg" />
+    <Content Include="Content\img\comments-1.jpg" />
+    <Content Include="Content\img\comments-2.jpg" />
+    <Content Include="Content\img\comments-3.jpg" />
+    <Content Include="Content\img\comments-4.jpg" />
+    <Content Include="Content\img\comments-5.jpg" />
+    <Content Include="Content\img\comments-6.jpg" />
+    <Content Include="Content\img\cotton-pad-with-flask-of-essential-oil-4202382.jpg" />
+    <Content Include="Content\img\crop-woman-with-pump-bottle-of-cream-in-bathroom-4177826.jpg" />
+    <Content Include="Content\img\fast&amp;furious.jpeg" />
+    <Content Include="Content\img\favicon.png" />
+    <Content Include="Content\img\features-1.png" />
+    <Content Include="Content\img\features-2.png" />
+    <Content Include="Content\img\features-3.png" />
+    <Content Include="Content\img\features-4.png" />
+    <Content Include="Content\img\ferarri.jpeg" />
+    <Content Include="Content\img\focused-woman-applying-cream-on-face-in-bathroom-4177827.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0025.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0026.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0027.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0028.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0029.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0030.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0031.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0032.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0033.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0034.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0035.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0036.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0037.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0038.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0039.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0040.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0041.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0042.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0043.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0044.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0045.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0046.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0047.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0048.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0049.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0050.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0051.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0052.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0053.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0054.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0055.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0056.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0057.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0058.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0059.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0060.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0061.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0062.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0063.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0064.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0065.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0066.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0067.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0068.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0069.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0070.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0071.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0072.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0073.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0074.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0075.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0076.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0077.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0078.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0079.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0080.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0081.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0082.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0083.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0084.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0085.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0086.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0087.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0088.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0089.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0090.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0091.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0092.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0094.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0095.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0096.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0097.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0098.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0099.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0100.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0101.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0103.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0106.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0107.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0108.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0109.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0110.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0111.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0112.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0113.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0115.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0119.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0120.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0121.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0122.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0123.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0124.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0125.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0126.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0127.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0128.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0129.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0130.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0131.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0132.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0133.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0134.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0135.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0136.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0137.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0138.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0139.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0140.jpg" />
+    <Content Include="Content\img\IMG-20200611-WA0141.jpg" />
+    <Content Include="Content\img\istockphoto-1169634751-170667a.jpg" />
+    <Content Include="Content\img\istockphoto-1169634829-170667a.jpg" />
+    <Content Include="Content\img\jeep.jpeg" />
+    <Content Include="Content\img\jeep2.jpeg" />
+    <Content Include="Content\img\man-in-white-dress-shirt-holding-black-smartphone-4006567.jpg" />
+    <Content Include="Content\img\person-applying-hand-cream-3762875.jpg" />
+    <Content Include="Content\img\person-holding-white-plastic-bottle-3616993.jpg" />
+    <Content Include="Content\img\pexels-photo-2744193.jpeg" />
+    <Content Include="Content\img\pexels-photo-3807571.jpeg" />
+    <Content Include="Content\img\pexels-photo-4046316.jpeg" />
+    <Content Include="Content\img\pexels-photo-4153618.jpeg" />
+    <Content Include="Content\img\pexels-photo-4153624.jpeg" />
+    <Content Include="Content\img\pexels-photo-4153629.jpeg" />
+    <Content Include="Content\img\pexels-photo-4491168.jpeg" />
+    <Content Include="Content\img\pexels-photo-5108868.jpeg" />
+    <Content Include="Content\img\portfolio\portfolio-1.jpg" />
+    <Content Include="Content\img\portfolio\portfolio-2.jpg" />
+    <Content Include="Content\img\portfolio\portfolio-3.jpg" />
+    <Content Include="Content\img\portfolio\portfolio-4.jpg" />
+    <Content Include="Content\img\portfolio\portfolio-5.jpg" />
+    <Content Include="Content\img\portfolio\portfolio-6.jpg" />
+    <Content Include="Content\img\portfolio\portfolio-7.jpg" />
+    <Content Include="Content\img\portfolio\portfolio-8.jpg" />
+    <Content Include="Content\img\portfolio\portfolio-9.jpg" />
+    <Content Include="Content\img\set-of-cosmetic-products-on-marble-shelf-in-modern-room-4202326.jpg" />
+    <Content Include="Content\img\silvercar.jpeg" />
+    <Content Include="Content\img\slide\slide-1.jpg" />
+    <Content Include="Content\img\slide\slide-2.jpg" />
+    <Content Include="Content\img\slide\slide-3.jpg" />
+    <Content Include="Content\img\soaps-on-marble-surface-with-line-chip-4202469.jpg" />
+    <Content Include="Content\img\team\team-1.jpg" />
+    <Content Include="Content\img\team\team-2.jpg" />
+    <Content Include="Content\img\team\team-3.jpg" />
+    <Content Include="Content\img\team\team-4.jpg" />
+    <Content Include="Content\img\testimonials\testimonials-1.jpg" />
+    <Content Include="Content\img\testimonials\testimonials-2.jpg" />
+    <Content Include="Content\img\testimonials\testimonials-3.jpg" />
+    <Content Include="Content\img\testimonials\testimonials-4.jpg" />
+    <Content Include="Content\img\testimonials\testimonials-5.jpg" />
+    <Content Include="Content\img\testimonials\testimonials-6.jpg" />
+    <Content Include="Content\img\wagon.jpeg" />
+    <Content Include="Content\img\woman-holding-black-mask-373939.jpg" />
+    <Content Include="Content\img\woman-with-soap-on-her-face-3762456.jpg" />
+    <Content Include="Content\js\main.js" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\vendor\animate.css\animate.css" />
+    <Content Include="Content\vendor\animate.css\animate.min.css" />
+    <Content Include="Content\vendor\aos\aos.css" />
+    <Content Include="Content\vendor\aos\aos.js" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="Content\vendor\boxicons\css\animations.css" />
+    <Content Include="Content\vendor\boxicons\css\boxicons.css" />
+    <Content Include="Content\vendor\boxicons\css\boxicons.min.css" />
+    <Content Include="Content\vendor\boxicons\css\transformations.css" />
+    <Content Include="Content\vendor\boxicons\fonts\boxicons.eot" />
+    <Content Include="Content\vendor\boxicons\fonts\boxicons.svg" />
+    <Content Include="Content\vendor\boxicons\fonts\boxicons.ttf" />
+    <Content Include="Content\vendor\boxicons\fonts\boxicons.woff" />
+    <Content Include="Content\vendor\boxicons\fonts\boxicons.woff2" />
+    <Content Include="Content\vendor\icofont\fonts\icofont.woff" />
+    <Content Include="Content\vendor\icofont\fonts\icofont.woff2" />
+    <Content Include="Content\vendor\icofont\icofont.min.css" />
+    <Content Include="Content\vendor\isotope-layout\isotope.pkgd.js" />
+    <Content Include="Content\vendor\isotope-layout\isotope.pkgd.min.js" />
+    <Content Include="Content\vendor\jquery-sticky\jquery.sticky.js" />
+    <Content Include="Content\vendor\jquery.easing\jquery.easing.min.js" />
+    <Content Include="Content\vendor\jquery\jquery.min.js" />
+    <Content Include="Content\vendor\jquery\jquery.min.map" />
+    <Content Include="Content\vendor\owl.carousel\assets\ajax-loader.gif" />
+    <Content Include="Content\vendor\owl.carousel\assets\owl.carousel.css" />
+    <Content Include="Content\vendor\owl.carousel\assets\owl.carousel.min.css" />
+    <Content Include="Content\vendor\owl.carousel\assets\owl.theme.default.css" />
+    <Content Include="Content\vendor\owl.carousel\assets\owl.theme.default.min.css" />
+    <Content Include="Content\vendor\owl.carousel\assets\owl.theme.green.css" />
+    <Content Include="Content\vendor\owl.carousel\assets\owl.theme.green.min.css" />
+    <Content Include="Content\vendor\owl.carousel\assets\owl.video.play.png" />
+    <Content Include="Content\vendor\owl.carousel\LICENSE" />
+    <Content Include="Content\vendor\owl.carousel\owl.carousel.js" />
+    <Content Include="Content\vendor\owl.carousel\owl.carousel.min.js" />
+    <Content Include="Content\vendor\owl.carousel\README.md" />
+    <Content Include="Content\vendor\php-email-form\validate.js" />
+    <Content Include="Content\vendor\venobox\venobox.css" />
+    <Content Include="Content\vendor\venobox\venobox.js" />
+    <Content Include="Content\vendor\venobox\venobox.min.css" />
+    <Content Include="Content\vendor\venobox\venobox.min.js" />
+    <Content Include="Content\vendor\waypoints\jquery.waypoints.min.js" />
+    <Content Include="Content\Video\production ID 4153591.mp4" />
+    <Content Include="Global.asax" />
+    <Content Include="index.html" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\esm\popper-utils.js" />
+    <Content Include="Scripts\esm\popper-utils.min.js" />
+    <Content Include="Scripts\esm\popper.js" />
+    <Content Include="Scripts\esm\popper.min.js" />
+    <Content Include="Scripts\index.js.flow" />
+    <Content Include="Scripts\esm\popper.min.js.map" />
+    <Content Include="Scripts\esm\popper.js.map" />
+    <Content Include="Scripts\esm\popper-utils.min.js.map" />
+    <Content Include="Scripts\esm\popper-utils.js.map" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\popper-utils.js" />
+    <Content Include="Scripts\popper-utils.min.js" />
+    <Content Include="Scripts\popper.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\src\index.js" />
+    <Content Include="Scripts\src\methods\defaults.js" />
+    <Content Include="Scripts\src\methods\destroy.js" />
+    <Content Include="Scripts\src\methods\disableEventListeners.js" />
+    <Content Include="Scripts\src\methods\enableEventListeners.js" />
+    <Content Include="Scripts\src\methods\placements.js" />
+    <Content Include="Scripts\src\methods\update.js" />
+    <Content Include="Scripts\src\modifiers\applyStyle.js" />
+    <Content Include="Scripts\src\modifiers\arrow.js" />
+    <Content Include="Scripts\src\modifiers\computeStyle.js" />
+    <Content Include="Scripts\src\modifiers\flip.js" />
+    <Content Include="Scripts\src\modifiers\hide.js" />
+    <Content Include="Scripts\src\modifiers\index.js" />
+    <Content Include="Scripts\src\modifiers\inner.js" />
+    <Content Include="Scripts\src\modifiers\keepTogether.js" />
+    <Content Include="Scripts\src\modifiers\offset.js" />
+    <Content Include="Scripts\src\modifiers\preventOverflow.js" />
+    <Content Include="Scripts\src\modifiers\shift.js" />
+    <Content Include="Scripts\src\utils\clockwise.js" />
+    <Content Include="Scripts\src\utils\computeAutoPlacement.js" />
+    <Content Include="Scripts\src\utils\debounce.js" />
+    <Content Include="Scripts\src\utils\find.js" />
+    <Content Include="Scripts\src\utils\findCommonOffsetParent.js" />
+    <Content Include="Scripts\src\utils\findIndex.js" />
+    <Content Include="Scripts\src\utils\getBordersSize.js" />
+    <Content Include="Scripts\src\utils\getBoundaries.js" />
+    <Content Include="Scripts\src\utils\getBoundingClientRect.js" />
+    <Content Include="Scripts\src\utils\getClientRect.js" />
+    <Content Include="Scripts\src\utils\getFixedPositionOffsetParent.js" />
+    <Content Include="Scripts\src\utils\getOffsetParent.js" />
+    <Content Include="Scripts\src\utils\getOffsetRect.js" />
+    <Content Include="Scripts\src\utils\getOffsetRectRelativeToArbitraryNode.js" />
+    <Content Include="Scripts\src\utils\getOppositePlacement.js" />
+    <Content Include="Scripts\src\utils\getOppositeVariation.js" />
+    <Content Include="Scripts\src\utils\getOuterSizes.js" />
+    <Content Include="Scripts\src\utils\getParentNode.js" />
+    <Content Include="Scripts\src\utils\getPopperOffsets.js" />
+    <Content Include="Scripts\src\utils\getReferenceNode.js" />
+    <Content Include="Scripts\src\utils\getReferenceOffsets.js" />
+    <Content Include="Scripts\src\utils\getRoot.js" />
+    <Content Include="Scripts\src\utils\getRoundedOffsets.js" />
+    <Content Include="Scripts\src\utils\getScroll.js" />
+    <Content Include="Scripts\src\utils\getScrollParent.js" />
+    <Content Include="Scripts\src\utils\getStyleComputedProperty.js" />
+    <Content Include="Scripts\src\utils\getSupportedPropertyName.js" />
+    <Content Include="Scripts\src\utils\getViewportOffsetRectRelativeToArtbitraryNode.js" />
+    <Content Include="Scripts\src\utils\getWindow.js" />
+    <Content Include="Scripts\src\utils\getWindowSizes.js" />
+    <Content Include="Scripts\src\utils\includeScroll.js" />
+    <Content Include="Scripts\src\utils\index.js" />
+    <Content Include="Scripts\src\utils\isBrowser.js" />
+    <Content Include="Scripts\src\utils\isFixed.js" />
+    <Content Include="Scripts\src\utils\isFunction.js" />
+    <Content Include="Scripts\src\utils\isIE.js" />
+    <Content Include="Scripts\src\utils\isModifierEnabled.js" />
+    <Content Include="Scripts\src\utils\isModifierRequired.js" />
+    <Content Include="Scripts\src\utils\isNumeric.js" />
+    <Content Include="Scripts\src\utils\isOffsetContainer.js" />
+    <Content Include="Scripts\src\utils\removeEventListeners.js" />
+    <Content Include="Scripts\src\utils\runModifiers.js" />
+    <Content Include="Scripts\src\utils\setAttributes.js" />
+    <Content Include="Scripts\src\utils\setStyles.js" />
+    <Content Include="Scripts\src\utils\setupEventListeners.js" />
+    <Content Include="Scripts\umd\popper-utils.js" />
+    <Content Include="Scripts\umd\popper-utils.min.js" />
+    <Content Include="Scripts\umd\popper.js" />
+    <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="services.html" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <None Include="packages.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="Scripts\umd\popper.min.js.map" />
+    <Content Include="Scripts\umd\popper.js.map" />
+    <Content Include="Scripts\umd\popper.js.flow" />
+    <Content Include="Scripts\umd\popper-utils.min.js.map" />
+    <Content Include="Scripts\umd\popper-utils.js.map" />
+    <Content Include="Scripts\README.md" />
+    <Content Include="Scripts\popper.min.js.map" />
+    <Content Include="Scripts\popper.js.map" />
+    <Content Include="Scripts\popper-utils.min.js.map" />
+    <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Services.cshtml" />
+    <Content Include="Views\Home\ContactUs.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51007</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44375/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
